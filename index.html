@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit Kala Akademi</title>
+    <link rel="stylesheet" href="./sass/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Header section starts -->
+<section>
+<header>
+
+<div class="header">
+
+<div class="social-icons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-google-plus"></i>
+</div>
+
+<div class="skip-sugg">
+    <div class="skip-content">
+    Skip to Main Content | Screen Reader Access | 
+    <div class="zoom">
+        <div class="A" onclick="changeFontSize('normal')">A</div>
+        <div class="A1" onclick="changeFontSize('larger')">A+</div> 
+        <div class="A2" onclick="changeFontSize('largest')">A++</div>
+    </div>
+     |<div class="dark-mode">
+        <div class="light" onclick="toggleDarkMode()">A</div>
+        <div class="dark" onclick="toggleDarkMode()">A</div>
+     </div> | English
+</div>
+
+<div class="suggestions">
+    <p>Suggestions</p>
+     | <p>Join Us</p> | <p>Contact</p>
+</div></div>
+
+</div>
+</header>
+</section>
+<!-- Header section ends -->
+
+<!-- navigation bar starts -->
+
+<section>
+    <div class="navigation-bar">
+       <div class="logo">
+          <img src="./Images/Lalit_Kala_Akademi.jpg" alt="">
+          <div class="lalit">
+            <p>ललित कला अकादमी</p>
+            <p>Lalit Kala Akademi</p>
+            <p id="location">National Academy of Art, New Delhi</p>
+          </div>
+       </div>
+       <div class="dig-ind"> 
+        <img src="data:image/png;base64,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" alt="" height="60px" width="100px">
+       <img src="data:image/png;base64,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" alt="" height="60px">
+    </div>
+      
+      
+    </div>
+</section>
+
+<section>
+    <div class="navigation-links">
+        <div class="route">
+            <a href="#">ABOUT US</a>
+            <a href="#">EVENTS</a>
+            <a href="#">GALLERY</a>
+            <a href="#">EXHIBITIONS</a>
+            <a href="#">PUBLICATIONS</a>
+            <a href="#">LIBRARY & ARCHIVE</a>
+            <a href="#">RESEARCH</a>
+            <a href="#">REGIONAL CENTERS</a>
+            <a href="#">ADMIN</a>
+            <a href="#">COLLECTION</a>
+        </div>
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+</section>
+
+<section>
+
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./Images/banner.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./Images/banner.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./Images/banner.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+</section>
+<!-- navigation bar ends -->
+
+
+<!-- Welcome to lalit akademi section starts -->
+<section>
+
+    <div class="welcome">
+        <div class="lalit-akademi">
+            <img src="https://www.indiaeasytrip.com/states-of-india/places-to-visit-in-lucknow/lalit-kala-academy.jpg" alt="" width="200px" height="220px">
+            <div class="lalit-content">
+                <h4> Welcome to <span>Lalit Kala Akademi</span></h4>
+                <p>Lalit Kala Akademi (National Academy of Art), New Delhi was inaugurated on 5th August 1954 by the then Minister for Education, Maulana Abul Kalam Azad and was registered under the Societies Registration Act 1860, on 11th March 1957. In pursuance of the objectives set out in the Constitution, the organisation functions through its General Council, Executive Board and other Committees. Lalit Kala Akademi, the youngest of the three Akademies founded by Govt. of India, establishes to direct its focus on activities in the field of Visual Arts. In his inaugural speech Maulana Abul Kalam Azad had stated</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Welcome to lalit akademi section starts -->
+
+<!-- Our events section starts -->
+<section>
+    <div class="our-events">
+        <div class="events">
+            <h4>Our <span>Events</span></h4>
+            <div class="event-route">
+                <a href="#" class="active">Upcoming</a>
+                <a href="#">Past</a>
+                <a href="#">Invite</a>
+                <a href="#">Film Shows</a>
+                <a href="#">Talk Shows</a>
+                <div class="event-icons">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+           
+        </div>
+        <div class="all-events">
+            <div class="event-cards">
+                <div class="my-card">
+                    <img src="./Images/65 Foundation Day Photo1.png" alt="">
+                    <div class="date">
+                        <h5>26</h5>
+                        <h5>APR</h5>
+                    </div>
+                    
+                    <p>Lalit Kala Akademi celebrated its 65th Foundation Day on Monday, 26 Apr, 2021, at of Rabindra Bhawan, New Delhi.</p>
+                <button>Read More</button>
+                </div>
+
+                <div class="my-card">
+                    <img src="./Images/65 Foundation Day Photo1.png" alt="">
+                    <div class="date">
+                        <h5>05</h5>
+                        <h5>MAY</h5>
+                    </div>
+                    
+                    <p>12th Triennale Preliminary Committee visited Rashtrapati Bhavan.</p>
+                <button id="second">Read More</button>
+                </div>
+
+                <div class="my-card">
+                    <img src="./Images/65 Foundation Day Photo1.png" alt="">
+                    <div class="date">
+                        <h5>20</h5>
+                        <h5>MAY</h5>
+                    </div>
+                    
+                    <p>Meeting of steering committee members for 2nd Print Biennale India held at Lalit Kala Akademi, New Delhi.</p>
+                <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our events section ends -->
+
+<!-- Gallery of Akademi starts -->
+<section>
+
+<div class="gallery">
+    <div class="my-gallery">
+        <h2>Gallery of <span>Akademi</span></h2>
+        <p>The Lalit Kala Akademi holds pride of place in the hearts and minds of the art community of this country. This is due to the all-embracing nature of the workings of the Akademi. Unlike commercial galleries, the Akademi is welcoming of even the humblest member of this profession and thus both senior, and upcoming artists, consider it a privilege to hold exhibitions on its premises.</p>
+    
+        <div class="gallery-route">
+            <div class="gal-route"> 
+            <a href="#" class="active">Gallery Photo</a>
+            <a href="#">Video Gallery</a>
+            <a href="#">Gallery Map</a>
+            <a href="#">Price List</a>
+            <a href="#">Gallery Form</a>
+            <a href="#">Rules</a>
+            <a href="#">Kaustubh Auditorium</a>
+            <a href="#">Allotment 2019-20</a>
+        </div>
+           
+
+            <div class="event-icons">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+        </div>
+    <div class="v1"></div>
+    <div class="gallery-img">
+        <img src="./Images/The-Untitled-Space-The-F-Word-Exhibit-5.png" alt="">
+        <img src="./Images/The-Untitled-Space-The-F-Word-Exhibit-5 copy.png" alt="">
+        <img src="./Images/The-Untitled-Space-The-F-Word-Exhibit-5 copy 3.png" alt="">
+        <img src="./Images/The-Untitled-Space-The-F-Word-Exhibit-5 copy 2.png" alt="">
+    </div>
+    </div>
+   
+</div>
+
+
+</section>
+<!-- Gallery of Akademi ends -->
+
+<!-- Updates and notifications section starts -->
+
+
+<section>
+    <div class="updates-section">
+        <div class="updates">
+            <div class="notification">
+                <h2>Update & <span>Notification</span></h2>
+              
+                <div class="noti-content">
+                <div class="my-content">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <p>Financial Assistance to Art Organisation</p>
+                </div>
+            
+                <div class="my-date"> 
+                <p>10th January, 2021</p>
+                </div>
+                
+            </div>
+
+            <div class="noti-content">
+                <div class="my-content">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <p>Kaustubh Auditorium Booking Price List</p>
+                </div>
+            
+                <div class="my-date"> 
+                <p>18th January, 2021</p>
+                </div>
+                
+            </div>
+
+            <div class="noti-content">
+                <div class="my-content">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <p>Final Rules and Guidelines of LKA Gallery</p>
+                </div>
+            
+                <div class="my-date"> 
+                <p>22th January, 2021</p>
+                </div>
+                
+            </div>
+
+            <div class="noti-content">
+                <div class="my-content">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <p>Consultant (Administration, Account & \Programme) (One) at R.C.Chennai, walk-in- Interview on 30.09.2019</p>
+                </div>
+            
+                <div class="my-date"> 
+                <p>5th February, 2021</p>
+                </div>
+                
+            </div>
+
+            <div class="noti-content">
+                <div class="my-content">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <p>Financial Assistance to Art Organisation</p>
+                </div>
+            
+                <div class="my-date"> 
+                <p>10th January, 2021</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="upcoming-camps">
+            <div class="camps-route"> 
+                <h2>Upcoming <span>Camps/Workshops<span></h2>
+                    <p>View all</p>
+            </div>
+
+            <div class="camps-data">
+                
+                <img src="https://lalitkala.gov.in/uploads/seminar/LKA_RC_Garhi_Miniature_Camp_Pic1.jpg" id="camp-img" alt="">
+            
+                <div class="camps-content">
+                    <div class="camp">
+                        <h3>National Wood Carving Artists Camp</h3>
+                        <p class="camp-date">08th Mar - 13th Mar 2021</p>
+                        <p>Lalit Kala Akademi, New Delhi in collaboration with Department of Language & Culture, Himachal Pradesh organised National Wood Carving Artists Camp.</p>
+                    </div>
+
+                    <div class="camp">
+                        <h3>Calligraphy Workshop “Spirits of Delhi”</h3>
+                        <p class="camp-date">10th Apr - 15th Apr 2021</p>
+                        <p>Akademi organized an exhibition and Calligraphy Workshop titled “Spirits of Delhi” on 15 September, 2014 at 6.00 pm. at Lalit Kala Akademi.</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+           
+        </div>
+        </div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- New tenders and latest post section starts -->
+<section>
+
+<div class="tenders-post">
+    <div class="tender-content">
+        <div class="tender">
+<h3>New <span>Tenders</span></h3>
+<div class="tend-box">
+    <div class="tend">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p class="my-date">28th Dec 2020</p>
+    </div>
+
+    <div class="tend">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p class="my-date">15th January, 2021</p>
+    </div>
+
+    <div class="tend">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p class="my-date">04th February, 2021</p>
+    </div>
+
+</div>
+        </div>
+        <div class="tender"> 
+            <h3>Latest <span>Post</span></h3>
+            <div class="fb-page" data-href="https://www.facebook.com/LalitKalaAkademi/" data-tabs="timeline" data-width="323" data-height="325" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/LalitKalaAkademi/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/LalitKalaAkademi/">Lalit Kala Akademi</a></blockquote>
+        </div>
+    </div>
+       
+<div class="lib-arch">
+    <div class="library-arch">
+        <div class="library">
+        <p>Library</p>
+    </div>
+
+    <div class="archive">
+        <p>Archive</p>
+    </div></div>
+
+    
+
+    <div class="lib-arch-box">
+        <img src="./Images/Layer 757.png" alt="">
+        <p>The Library came into existence along with the Lalit Kala Akademi in 1954 in a small room in Jaipur House, New Delhi. The Library was shifted to its present premises, Rabindra Bhavan (New Delhi) in 1962.</p>
+        <a href="#">Read More..</a>
+    </div>
+</div>
+
+
+    </div>
+    
+</div>
+
+
+   
+</section>
+<!-- New tenders and latest post section ends -->
+
+<!-- Regional Center section starts -->
+
+<section>
+    <div class="regional-centers">
+        <div class="regional">
+            <h3>Regional <span>Centers</span></h3>
+
+            <div class="reg-images">
+                <i class="fa-solid fa-chevron-left"></i>
+
+                <img src="./Images/1.png" alt="">
+                <img src="./Images/2.png" alt="">
+                <img src="./Images/3.png" alt="">
+                <img src="./Images/4.png" alt="">
+
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Regional Center section ends -->
+
+<!-- footer section starts -->
+
+<section class="my-footer">
+
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>COMPANY INFO</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">History</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Objectives</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Constitution</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Governing Body</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">General Council</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Finance Committee</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Who is Who</a></li>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>QUICK LINKS</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Events</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Gallery</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Exhibitions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Publications</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Library & Archive</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Research</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Regional Centers</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>OTHER LINKS</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Tenders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Career</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">RTI</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Collection</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Sitemap</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contact</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>SUBSCRIBE US</h5>
+            <p>Submit your email id to get new updates</p>
+            <div class="footer-form">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Enter your Email">
+              <button class="btn btn-primary" type="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
+        <p></p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </div> -->
+    </footer>
+  </div>
+
+</section>
+
+
+<!-- footer section ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0" nonce="ZY8znH5H"></script>
+<script src="./app.js"></script>
+</body>
+</html>
